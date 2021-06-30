@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/topic/index",
-    "pages/account/index"
+    "pages/ucenter/index/index",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "和正服务",
+    "navigationBarTitleText": "和正企业",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -29,7 +30,7 @@
         "text": "服务"
       },
       {
-        "pagePath": "pages/account/index",
+        "pagePath": "pages/ucenter/index/index",
         "iconPath": "static/images/ic_menu_me_nor.png",
         "selectedIconPath": "static/images/ic_menu_me_pressed.png",
         "text": "我的"
@@ -37,7 +38,7 @@
     ]
   },
   "useExtendedLib": {
-    "weui": true
+   
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,0 +1,24 @@
+{
+  "name": "hzfw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@miniprogram-component-plus/tabs": "^1.0.0",
+    "weui-miniprogram": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlaji/hzfw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wlaji/hzfw/issues"
+  },
+  "homepage": "https://github.com/wlaji/hzfw#readme"
+}
