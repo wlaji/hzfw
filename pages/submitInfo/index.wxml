@@ -1,0 +1,23 @@
+<mp-form-page>
+  <view slot="title">
+    <image style="width: 600rpx; height: 150rpx;" src="http://www.hzqy168.cn/static/images/logo_jfxx_b.png?t=1"></image>
+  </view>
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cells title="留言">
+      <mp-cell>
+        <textarea class="weui-textarea" placeholder="请输入您的留言" style="height: 4em" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="联系方式">
+      <mp-cell title="姓名">
+        <input class="weui-input" placeholder="请填写您的姓名" />
+      </mp-cell>
+      <mp-cell title="手机号">
+        <input class="weui-input" placeholder="请填写您的手机号" />
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
+  <view slot="button">
+    <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+  </view>
+</mp-form-page>

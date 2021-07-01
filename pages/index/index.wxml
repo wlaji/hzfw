@@ -7,7 +7,7 @@
     </navigator>
   </view>
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-    <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
       <navigator url="{{item.link}}">
         <image src="{{item.image_url}}" background-size="cover"></image>
       </navigator>
@@ -17,8 +17,9 @@
     <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
       bindchange="onChange" activeClass="tab-bar-title__selected">
       <block wx:for="{{tabs}}" wx:key="title">
-        <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
-          <view class="tab-item" wx:for="{{item.tabContent}}" wx:key="title" wx:for-item="childItem">
+        <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}">
+          <view class="tab-item" wx:for="{{item.tabContent}}" wx:key="title" wx:for-item="childItem"
+            bindtap="openConfirm">
             <view class="imgWrap">
               <image src="{{childItem.img}}" mode="aspectFit">
               </image>
@@ -39,7 +40,7 @@
       <text class="txt">公司信息</text>
     </view>
     <view class="b">
-      <view class="item item-1" wx:for="{{brand}}" wx:key="item.id">
+      <view class="item item-1" wx:for="{{brand}}" wx:key="id">
         <view class="wrap">
           <view class="imgWrap">
             <image class="img" src="{{item.image_url}}" mode="aspectFill"></image>
@@ -49,6 +50,45 @@
           </view>
         </view>
       </view>
+    </view>
+  </view>
+  <view class="footer">
+    <!-- <view class="footer-item">
+      <navigator url="/pages/team/index">
+        <view class="footer-item-head">
+          <view>
+            <text>精英团队</text>
+          </view>
+          <view>
+            <mp-icon icon="arrow" color="white" size="{{15}}"></mp-icon>
+          </view>
+        </view>
+      </navigator>
+
+    </view> -->
+    <view class="footer-item">
+      <navigator url="/pages/contactUs/index">
+        <view class="footer-item-head">
+          <view>
+            <text>联系我们</text>
+          </view>
+          <view>
+            <mp-icon icon="arrow" color="white" size="{{15}}"></mp-icon>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="footer-item">
+      <navigator url="/pages/aboutUs/index">
+        <view class="footer-item-head">
+          <view>
+            <text>关于我们</text>
+          </view>
+          <view>
+            <mp-icon icon="arrow" color="white" size="{{15}}"></mp-icon>
+          </view>
+        </view>
+      </navigator>
     </view>
   </view>
 </view>

@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "mp-form-page": "/miniprogram_npm/weui-miniprogram/form-page/form-page",
+        "mp-form": "/miniprogram_npm/weui-miniprogram/form/form"
+    },
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "和正企业服务，竭诚为您服务",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4"
+}

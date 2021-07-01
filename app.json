@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/topic/index",
     "pages/ucenter/index/index",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/submitInfo/index",
+    "pages/aboutUs/index",
+    "pages/contactUs/index",
+    "pages/team/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,8 +20,7 @@
     "borderStyle": "white",
     "selectedColor": "#b4282d",
     "color": "#666",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "iconPath": "static/images/ic_menu_choice_nor.png",
         "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
@@ -38,7 +41,14 @@
     ]
   },
   "useExtendedLib": {
-   
+
+  },
+  "usingComponents": {
+    "mp-tabs": "/miniprogram_npm/@miniprogram-component-plus/tabs",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

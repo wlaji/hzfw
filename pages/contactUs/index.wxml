@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="mainC" style="margin-top:50rpx;">
+        <view bindtap="makePhoneCall">
+            <text style="color:#3797D9;text-decoration:underline">联系电话：0731-88330379</text>
+        </view>
+        <view>
+            <text>联系QQ：287235872@qq.com</text>
+        </view>
+        <view>
+            <text>关注新浪微博@和正企业服务有限公司</text>
+        </view>
+    </view>
+    <view class="gzh">
+        <text>
+            关注和正财税公众号
+        </text>
+        <image show-menu-by-longpress="true" style="width:600rpx;height:600rpx;margin-top:20rpx;"
+            src="http://www.hzqy168.cn/plugins/ueditor/jsp/upload1/20201210/70481607568975215.png"></image>
+    </view>
+
+</view>
