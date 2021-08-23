@@ -1,11 +1,10 @@
 import utils from '../utils/util'
 //获取首页信息
-const getHomeInfo = function (data) {
-    return utils.get('index/index', data)
+export const getProfessionList = function (data) {
+	return utils.get('/api/getProfessionList', data)
 }
 
-const homeApi = {
-    getHomeInfo
+//网站信息
+export function getGroupInfo(data) {
+	return utils.post('/api/getGroupInfo', data)
 }
-
-export default homeApi

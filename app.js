@@ -1,5 +1,3 @@
-// app.js
-import api from './api/index'
 App({
   onLaunch() {
     // 展示本地存储能力
@@ -16,6 +14,5 @@ App({
   },
   globalData: {
     userInfo: null
-  },
-  $api:api
+  }
 })

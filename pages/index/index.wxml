@@ -1,71 +1,48 @@
 <!--index.wxml-->
 <view class="container">
   <view class="search">
+    <mp-icon icon="location" color="#1972ea" size="{{25}}"></mp-icon>
+    <view class="location">
+      <text style="font-size:14px">长沙</text>
+      <mp-icon icon="arrow" color="#1972ea" size="{{14}}"></mp-icon>
+    </view>
     <navigator url="/pages/search/search" class="input">
       <image class="icon"></image>
-      <text class="txt">搜索</text>
+      <text class="txt">请输入关键词查询</text>
     </navigator>
   </view>
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-    <swiper-item wx:for="{{banner}}" wx:key="id">
-      <navigator url="{{item.link}}">
-        <image src="{{item.image_url}}" background-size="cover"></image>
-      </navigator>
+    <swiper-item wx:for="{{banner}}" wx:key="index">
+      <image src="{{item}}" mode="aspectFill"></image>
     </swiper-item>
   </swiper>
-  <view class="tab-nav">
-    <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
-      bindchange="onChange" activeClass="tab-bar-title__selected">
-      <block wx:for="{{tabs}}" wx:key="title">
-        <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}">
-          <view class="tab-item" wx:for="{{item.tabContent}}" wx:key="title" wx:for-item="childItem"
-            bindtap="openConfirm">
-            <view class="imgWrap">
-              <image src="{{childItem.img}}" mode="aspectFit">
-              </image>
-            </view>
-            <view class="title">
-              <text>{{childItem.title}}</text>
-            </view>
-            <view class="desc">
-              <text>{{childItem.desc}}</text>
-            </view>
-          </view>
-        </view>
-      </block>
-    </mp-tabs>
+  <swiper class="trait" :indicator-dots="false" display-multiple-items="4">
+    <swiper-item wx:for="{{traitData}}" wx:key="index">
+      <image src="{{item.url}}" mode="aspectFit"></image>
+      <view>{{item.name}}</view>
+    </swiper-item>
+  </swiper>
+  <view class="inquire">
+    <view>
+      <image src="http://121.40.112.169:55505/file/image/static/202108/6d2b8474-2137-4cda-bf28-011be91f710d.png" alt="">
+      </image>
+    </view>
+    <view>
+      <image src="http://121.40.112.169:55505/file/image/static/202108/46131cda-7d9c-483d-a5bd-778c00e48e9c.png" alt="">
+      </image>
+    </view>
   </view>
-  <view class="a-section a-brand">
-    <view class="h">
-      <text class="txt">公司信息</text>
-    </view>
-    <view class="b">
-      <view class="item item-1" wx:for="{{brand}}" wx:key="id">
-        <view class="wrap">
-          <view class="imgWrap">
-            <image class="img" src="{{item.image_url}}" mode="aspectFill"></image>
-          </view>
-          <view class="mt">
-            <text class="brand">{{item.desc}}</text>
-          </view>
-        </view>
-      </view>
-    </view>
+  <view wx:for="{{professionList}}" wx:key="index"  class="profession">
+    <view class="title">{{item.name}}</view>
+    <swiper class="profession-swiper" :indicator-dots="false" display-multiple-items="2">
+      <swiper-item wx:for="{{item.children}}" wx:key="index">
+        <image src="{{item.picPath}}" mode="aspectFill"></image>
+        <view style="font-size: 18px;font-weight: 700;">{{item.name}}</view>
+        <view style="font-size:16px">{{item.description}}</view>
+      </swiper-item>
+    </swiper>
   </view>
   <view class="footer">
-    <!-- <view class="footer-item">
-      <navigator url="/pages/team/index">
-        <view class="footer-item-head">
-          <view>
-            <text>精英团队</text>
-          </view>
-          <view>
-            <mp-icon icon="arrow" color="white" size="{{15}}"></mp-icon>
-          </view>
-        </view>
-      </navigator>
-
-    </view> -->
     <view class="footer-item">
       <navigator url="/pages/contactUs/index">
         <view class="footer-item-head">

@@ -5,6 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "@miniprogram-component-plus/tabs": "^1.0.0",
+    "axios": "^0.21.1",
+    "qs": "^6.10.1",
     "weui-miniprogram": "^1.0.8"
   },
   "devDependencies": {},

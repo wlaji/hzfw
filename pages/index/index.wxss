@@ -1,15 +1,22 @@
 .search {
   height: 88rpx;
   width: 100%;
-  padding: 0 30rpx;
+  padding: 0 10rpx;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.search .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search .input {
-  width: 690rpx;
+  margin-left: 10px;
+  flex: 1;
   height: 56rpx;
   background: #ededed;
   border-radius: 8rpx;
@@ -159,26 +166,84 @@
   height: 100%;
 }
 
-.footer{
+.footer {
   margin-top: 50rpx;
   border-top: 5px solid #da2238;
   background-color: #000;
-  color:#fff
+  color: #fff
 }
-.footer-item{
+
+.footer-item {
   line-height: 60rpx;
   padding: 20rpx;
   border-bottom: 1px solid #232322;
 }
-.footer-item-head{
+
+.footer-item-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-item-extend{
+.footer-item-extend {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 30rpx;
+}
+
+.trait {
+  height: 100px;
+  margin: 10px 0;
+}
+
+.trait swiper-item {
+  text-align: center;
+}
+
+.trait image {
+  width: 66px;
+  height: 66px;
+}
+
+.inquire {
+  display: flex;
+}
+
+.inquire>view {
+  flex: 1
+}
+
+.inquire image {
+  width: 100%;
+  height: 70px;
+}
+
+.profession {
+  margin: 40rpx 0;
+  padding: 0 10rpx;
+}
+
+.profession .title {
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  border-left: 4px solid #5a9dff;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.profession-swiper {
+  height: 250px;
+
+}
+
+.profession-swiper swiper-item {
+  box-sizing: border-box;
+  padding: 0 10px 0 0;
+}
+
+.profession-swiper image {
+  width: 100%;
+  height: 180px;
 }

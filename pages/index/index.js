@@ -1,23 +1,65 @@
 //获取应用实例
 const app = getApp()
+import {
+  getProfessionList,
+  getGroupInfo
+} from "../../api/home";
 Page({
   data: {
     tabs: [],
+    professionList: [],
     activeTab: 0,
-    banner: [{
-        id: '1',
-        link: '',
-        image_url: '/static/images/banner1.jpg'
+    banner: [],
+    traitData: [{
+        name: "公司注册",
+        url: "http://121.40.112.169:55505/file/image/static/202108/ef2ec8a7-7dd9-42ec-b06c-f3f4c181f16b.png"
+      }, {
+        name: "工商代办",
+        url: "http://121.40.112.169:55505/file/image/static/202108/3704cdd0-83b2-4be9-8c31-3b1fb8f3950a.png"
       },
       {
-        id: '2',
-        link: '',
-        image_url: '/static/images/banner2.jpg'
+        name: "公司注销",
+        url: "http://121.40.112.169:55505/file/image/static/202108/08c4da5f-7fab-434b-93e6-27fa52a67a8b.png"
       },
       {
-        id: '3',
-        link: '',
-        image_url: '/static/images/banner3.jpg'
+        name: "记账报税",
+        url: "http://121.40.112.169:55505/file/image/static/202108/fd6df59c-c6bd-4c63-8c21-9b6f8a5062db.png"
+      }, {
+        name: "财税代理",
+        url: "http://121.40.112.169:55505/file/image/static/202108/1450b10f-ef1a-45ce-b798-99556cd35870.png"
+      }, {
+        name: "验资审计",
+        url: "http://121.40.112.169:55505/file/image/static/202108/fd6df59c-c6bd-4c63-8c21-9b6f8a5062db.png"
+      }, {
+        name: "食药医疗",
+        url: "http://121.40.112.169:55505/file/image/static/202108/58a84dc0-1d6f-4365-a2b9-2df27e70caad.png"
+      }, {
+        name: "交通贸易",
+        url: "http://121.40.112.169:55505/file/image/static/202108/ef2ec8a7-7dd9-42ec-b06c-f3f4c181f16b.png"
+      }, {
+        name: "增值电信",
+        url: "http://121.40.112.169:55505/file/image/static/202108/7a505b08-b4e6-44f1-b41e-ba4b7807cb1c.png"
+      }, {
+        name: "人力劳务",
+        url: "http://121.40.112.169:55505/file/image/static/202108/7a505b08-b4e6-44f1-b41e-ba4b7807cb1c.png"
+      }, {
+        name: "文化娱乐",
+        url: "http://121.40.112.169:55505/file/image/static/202108/01acbeda-6bf0-45a3-9141-84d393e1fd67.png"
+      }, {
+        name: "网站建设",
+        url: "http://121.40.112.169:55505/file/image/static/202108/08c4da5f-7fab-434b-93e6-27fa52a67a8b.png"
+      }, {
+        name: "技术服务",
+        url: "http://121.40.112.169:55505/file/image/static/202108/0da198bb-960f-4715-80db-2121ba08bdc9.png"
+      }, {
+        name: "微信开发",
+        url: "http://121.40.112.169:55505/file/image/static/202108/08c4da5f-7fab-434b-93e6-27fa52a67a8b.png"
+      }, {
+        name: "专利",
+        url: "http://121.40.112.169:55505/file/image/static/202108/8f283a52-4cff-4360-b845-6c740c4aa9b1.png"
+      }, {
+        name: "更多",
+        url: "http://121.40.112.169:55505/file/image/static/202108/eb70ea93-a952-4c1b-b515-21c53eed4b2e.png"
       }
     ],
     brand: [{
@@ -148,8 +190,25 @@ Page({
             desc: '延续品牌，加强形象'
           }
         ]
-      },
+      }
     ]
+    let professionList, bannerInfo
+    getProfessionList().then(res => {
+      console.log(res)
+      professionList = res.data
+      this.setData({
+        professionList
+      })
+    })
+    getGroupInfo({
+      groupName: "websiteSettings"
+    }).then(res => {
+      console.log(res)
+      bannerInfo = JSON.parse(res.data[2].keyValue)
+      this.setData({
+        banner: bannerInfo
+      })
+    })
     this.setData({
       tabs
     })

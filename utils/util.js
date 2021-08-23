@@ -1,4 +1,4 @@
-const ApiRootUrl = 'https://4031w093e1.goho.co/api/';
+const ApiRootUrl = 'http://121.40.112.169:55505';
 function formatTime(date) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1
@@ -32,12 +32,9 @@ function request(url, data = {}, method = "GET") {
       },
       success: function (res) {
         console.log("success");
-
         if (res.statusCode == 200) {
-
           if (res.data.errno == 401) {
             //需要登录后才可以操作
-
             let code = null;
             return login().then((res) => {
               code = res.code;

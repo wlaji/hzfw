@@ -33,6 +33,18 @@
         "text": "服务"
       },
       {
+        "pagePath": "pages/topic/index",
+        "iconPath": "static/images/ic_menu_menu_nor.png",
+        "selectedIconPath": "static/images/ic_menu_menu_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/topic/index",
+        "iconPath": "static/images/ic_menu_msg_nor.png",
+        "selectedIconPath": "static/images/ic_menu_msg_pressed.png",
+        "text": "消息"
+      },
+      {
         "pagePath": "pages/ucenter/index/index",
         "iconPath": "static/images/ic_menu_me_nor.png",
         "selectedIconPath": "static/images/ic_menu_me_pressed.png",
